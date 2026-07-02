@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -6,6 +5,7 @@ const Navbar = () => {
     <>
       <Link to="/products">Products</Link>
       <Link to="/displayCart">Display Cart</Link>
+      <Link to="/productsDataWithApi">Products With Api</Link>
     </>
   );
 };
