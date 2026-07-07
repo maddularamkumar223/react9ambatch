@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FormComponent from "../FormComponent";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { validation } from "../../../apiCalls/AuthThunk";
 
 const Login = () => {
   let [details, setDetails] = useState({
@@ -7,6 +10,9 @@ const Login = () => {
     password: "",
   });
   let { email, password } = details;
+  let dispatch = useDispatch();
+  let { login } = useSelector((state) => state.auth);
+  console.log(login)
   let data = [
     {
       displayName: "Email",
@@ -31,18 +37,20 @@ const Login = () => {
     if (email === "" || password === "") {
       alert("Fill All The Fields");
     } else {
-      console.log(details);
-      setDetails({
-        email: "",
-        password: "",
-      });
+      dispatch(validation(details));
     }
   };
+  let navigate = useNavigate();
+  useEffect(() => {
+    if (login) {
+      navigate("/");
+    }
+  }, [login]);
   return (
     <form onSubmit={handleSubmit}>
       <h1>Log In </h1>
       <FormComponent data={data} handleChange={handleChange} />
-      <aside style={{textAlign:"center"}}>
+      <aside style={{ textAlign: "center" }}>
         <button>Submit</button>
       </aside>
     </form>

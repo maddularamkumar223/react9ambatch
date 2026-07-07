@@ -33,13 +33,15 @@ form {
   justify-content: space-evenly;
   flex-direction: column;
   border-radius: 20px;
+  overflow-y: scroll;
+  scrollbar-width: none;
   aside {
     width: 80%;
     label {
       display: block;
       font-size: 20px;
       font-weight: 500;
-      margin-bottom: 10px;
+      margin: 10px;
     }
     input,
     button {
@@ -50,6 +52,7 @@ form {
       font-size: 20px;
       font-weight: 500;
       cursor: pointer;
+      margin-top: 10px;
     }
   }
 }
