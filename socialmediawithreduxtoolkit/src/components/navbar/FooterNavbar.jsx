@@ -12,7 +12,7 @@ const FooterNavbar = () => {
     },
     {
       name: "Add Post",
-      path: "/",
+      path: "/addPost",
     },
     {
       name: "Search",

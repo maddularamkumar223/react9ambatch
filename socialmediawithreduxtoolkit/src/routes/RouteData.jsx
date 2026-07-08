@@ -5,6 +5,7 @@ import Message from "../components/messages/Message";
 import Notifications from "../components/notifications/Notifications";
 import Login from "../components/auth/login/Login";
 import Register from "../components/auth/register/Register";
+import AddPost from "../components/posts/AddPost";
 
 let RouteData = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ let RouteData = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/addPost",
+        element: <AddPost />,
       },
     ],
   },
