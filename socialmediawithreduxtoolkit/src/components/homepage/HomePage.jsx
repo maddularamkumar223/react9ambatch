@@ -1,9 +1,18 @@
-import React from 'react'
+import DisplayPosts from "./DisplayPosts";
+import Users from "./Users";
+import Style from "./homepage.module.css";
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <section className={Style.homepageContainer}>
+      <article className={Style.displayPost}>
+        <DisplayPosts />
+      </article>
+      <article className={Style.displayUsers}>
+        <Users />
+      </article>
+    </section>
+  );
+};
 
-export default HomePage
+export default HomePage;

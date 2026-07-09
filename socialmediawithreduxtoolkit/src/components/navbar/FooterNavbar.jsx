@@ -20,7 +20,7 @@ const FooterNavbar = () => {
     },
     {
       name: "Profile",
-      path: "/",
+      path: "/profile",
     },
   ];
 

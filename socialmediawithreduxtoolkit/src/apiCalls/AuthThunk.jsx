@@ -28,3 +28,9 @@ export let validation = createAsyncThunk(
     }
   },
 );
+
+export let fetchUsers = createAsyncThunk("fetchUsers/users", async () => {
+  let response = await fetch(`${baseUrl}/users`);
+  let responseData = await response.json();
+  return responseData;
+});

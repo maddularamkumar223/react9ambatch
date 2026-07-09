@@ -18,7 +18,7 @@ let PostSlice = createSlice({
       })
       .addCase(addPost.fulfilled, (state, action) => {
         console.log(action)
-        state.posts = state.posts.push(action.payload.responseData);
+        // state.posts = state.posts.push(action.payload.responseData);
         state.loading = false;
       })
       .addCase(addPost.rejected, (state, action) => {
@@ -33,6 +33,7 @@ let PostSlice = createSlice({
       })
       .addCase(fetchPost.rejected, (state, action) => {
         state.message = action.error.message;
+        console.log(action)
       });
   },
 });

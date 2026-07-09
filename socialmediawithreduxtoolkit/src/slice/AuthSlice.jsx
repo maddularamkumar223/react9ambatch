@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addUser, validation } from "../apiCalls/AuthThunk";
+import { addUser, fetchUsers, validation } from "../apiCalls/AuthThunk";
 
 let initialState = {
   addResponse: null,
@@ -36,6 +36,15 @@ let AuthSlice = createSlice({
       })
       .addCase(validation.rejected, (state, action) => {
         console.log(action);
+      })
+      .addCase(fetchUsers.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchUsers.fulfilled, (state, action) => {
+        state.users = action.payload;
+      })
+      .addCase(fetchUsers.rejected, (state, action) => {
+        state.message = action.error.message;
       });
   },
 });

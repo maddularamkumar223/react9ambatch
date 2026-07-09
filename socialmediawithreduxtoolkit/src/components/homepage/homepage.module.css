@@ -1,0 +1,41 @@
+.homepageContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.homepageContainer article {
+  border: solid;
+  height: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+#post {
+  height: 250px;
+  width: 300px;
+  border: solid;
+  border-radius: 22px;
+  padding: 10px;
+  img {
+    height: 70%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.like{
+    /* border: solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    span{
+        font-size: 25px;
+    }
+}

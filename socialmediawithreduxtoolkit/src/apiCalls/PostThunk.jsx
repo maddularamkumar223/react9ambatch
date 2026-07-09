@@ -10,10 +10,12 @@ export let addPost = createAsyncThunk("addPost/post", async (data) => {
     body: JSON.stringify(data),
   });
   let responseValue = await response.json();
-  return {
-    statusCode: response.status,
-    responseData: responseValue,
-  };
+  console.log(response);
+  // return {
+  //   statusCode: response.status,
+  //   responseData: responseValue,
+  // };
+  return responseValue;
 });
 
 export let fetchPost = createAsyncThunk("fetchPost/post", async () => {
