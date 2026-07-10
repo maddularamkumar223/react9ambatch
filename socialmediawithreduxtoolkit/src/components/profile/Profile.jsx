@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 
 const Profile = () => {
@@ -6,13 +5,14 @@ const Profile = () => {
   console.log(currentUser);
   return (
     <div>
-      <p>Username: {currentUser.name}</p>
-      <p>Email: {currentUser.email}</p>
-      <p>Following:{currentUser.following.length}</p>
-      <p>Followers:{currentUser.followers.length}</p>
+      <p>Username: {currentUser?.name}</p>
+      <p>Email: {currentUser?.email}</p>
+      <p>Following:{currentUser?.following.length}</p>
+      <p>Followers:{currentUser?.followers.length}</p>
       <div>
         <button>Edit</button>
         <button>Delete</button>
+        <button>Logout</button>
       </div>
     </div>
   );

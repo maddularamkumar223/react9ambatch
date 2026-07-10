@@ -5,7 +5,10 @@
       "email": "ram@gmail.com",
       "password": "123456",
       "gender": "male",
-      "following": [],
+      "following": [
+        "GTtKjQsBSSI",
+        "wEE-EXuBS2I"
+      ],
       "followers": [],
       "id": "hkDVlRh-rsk"
     },
@@ -15,7 +18,9 @@
       "password": "123456",
       "gender": "male",
       "following": [],
-      "followers": [],
+      "followers": [
+        "hkDVlRh-rsk"
+      ],
       "id": "GTtKjQsBSSI"
     },
     {
@@ -24,7 +29,9 @@
       "password": "123456",
       "gender": "female",
       "following": [],
-      "followers": [],
+      "followers": [
+        "hkDVlRh-rsk"
+      ],
       "id": "wEE-EXuBS2I"
     },
     {
@@ -33,7 +40,9 @@
       "password": "123456",
       "gender": "female",
       "following": [],
-      "followers": [],
+      "followers": [
+        "hkDVlRh-rsk"
+      ],
       "id": "_4KD9QBUFCc"
     }
   ],

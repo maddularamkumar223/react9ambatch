@@ -4,7 +4,7 @@
 }
 
 .homepageContainer article {
-  border: solid;
+  border: 1px solid;
   height: inherit;
   width: 100%;
   display: flex;
@@ -19,7 +19,7 @@
 #post {
   height: 250px;
   width: 300px;
-  border: solid;
+  border: 1px solid;
   border-radius: 22px;
   padding: 10px;
   img {
