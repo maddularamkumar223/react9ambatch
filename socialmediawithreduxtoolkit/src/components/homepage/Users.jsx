@@ -64,7 +64,7 @@ const Users = () => {
                   updateFollowings(userid, user.id);
                 }}
               >
-                {currentUser.following.includes(user.id)
+                {currentUser?.following.includes(user.id)
                   ? "Following"
                   : "Follow"}
               </button>
@@ -73,7 +73,7 @@ const Users = () => {
                   unFollowUser(userid, user.id);
                 }}
               >
-                {currentUser.following.includes(user.id) && "Unfollow"}
+                {currentUser?.following.includes(user.id) && "Unfollow"}
               </button>
             </div>
           );
